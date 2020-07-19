@@ -1,0 +1,11 @@
+{
+  "name": "人",
+  "children":[
+    {"name": "两", "value": 10, "test": "A incredible description"},
+    {"name": "伕", "value": 10, "test": "A incredible description"},
+    {"name": "众", "value": 10, "test": "A incredible description"},
+    {"name": "佽", "value": 10, "test": "A incredible description"},
+    {"name": "侅", "value": 10, "test": "A incredible description"},
+    {"name": "俠", "value": 1, "test": "A incredible description"}
+  ]
+}
