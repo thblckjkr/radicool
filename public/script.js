@@ -9,10 +9,14 @@ series.dataSource.url = "generated.json";
 series.dataFields.value = "value";
 series.dataFields.name = "name";
 series.dataFields.children = "children";
+series.dataFields.linkWith = "linkWith";
+series.dataFields.id = "name";
 
 // Add labels
 series.nodes.template.label.text = "{name}";
-series.nodes.template.tooltipText = "{name}: [bold]{value}[/][\n][URL]{test}";
+series.nodes.template.tooltipText = "{name}: [bold]{value}[/]\nDescription: {test}";
+
+// series.slices.template.cursorDownStyle = am4core.MouseCursorStyle.grabbing;
 
 series.maxLevels = 2;
 
