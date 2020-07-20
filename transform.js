@@ -5,7 +5,7 @@ const fs = require('fs');
 var nodes = [];
 
 let i = 0;
-fs.readFile('data/radkfile3', 'utf-8', function (err, content) {
+fs.readFile('data/kradfile3', 'utf-8', function (err, content) {
 	var parent;
 	if (err) {
 		console.log("err"+err); return;
@@ -13,15 +13,24 @@ fs.readFile('data/radkfile3', 'utf-8', function (err, content) {
 
 	lines = content.split('\n');
 	lines.some(line => {
-		i++; if(i > 46) return true;
+		i++; if(i > 60) return true;
 
-		if ( line.indexOf('$') === 0 ) {
-			parent = line.substring(2, 3);
-			nodes.push({ name: parent, children : []});
-		} else if ( line.indexOf('#') !== 0 ){
-			let characters = line.split('');
-			index = nodes.findIndex( node => node.name == parent );
-			characters.forEach( (character) => nodes[index].children.push( {name: character, value: 1}  ));
+		if ( line.indexOf('#') !== 0 ){
+			let items = line.split(' ');
+			child = items[0];
+
+			characters = items.slice(2);
+			characters.forEach(parent => {
+				index = nodes.findIndex( node => node.name == parent );
+
+				if (index == -1) {
+					nodes.push({ name: parent, children : [ { name: child, value: 1 } ] } );
+				}else{
+					nodes[index].children.push( { name: child, value: 1 } );
+				}
+
+				// characters.forEach( (character) => nodes[index].children.push( { name: character, value: 1 }  ));
+			});
 		}
 	});
 	console.log(nodes);
