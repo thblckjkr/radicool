@@ -1,6 +1,6 @@
 # RadiCool
 
-The main idea of the project, is to create a visualization of the relationship of kanji with the radicals that composes them.
+The main idea of the project, is to create a visualization of the relationship of kanji with the radicals that compose them.
 
 ## Data
 
@@ -33,6 +33,8 @@ So, I just made a simple script to transform the **RADKFILE** into a *simple* JS
 
 - If you used conventional commits, that would be cool.
 - I don't use a linter because the project is small enough to not require it.
+- Please use a `editorconfig` plugin.
+- `Tabs > Spaces`
 
 ## Thanks to
 
