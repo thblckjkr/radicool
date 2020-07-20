@@ -1,5 +1,7 @@
 # RadiCool
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7b5acafa-f32d-4357-bf03-b1af54175ab4/deploy-status)](https://app.netlify.com/sites/radicool/deploys)
+
 The main idea of the project, is to create a visualization of the relationship of kanji with the radicals that compose them.
 
 ## Data
