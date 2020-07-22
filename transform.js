@@ -13,7 +13,7 @@ fs.readFile('data/kradfile3', 'utf-8', function (err, content) {
 
 	lines = content.split('\n');
 	lines.some(line => {
-		i++; if(i > 60) return true;
+		// i++; if(i > 6000) return true;
 
 		if ( line.indexOf('#') !== 0 ){
 			let items = line.split(' ');
@@ -33,7 +33,6 @@ fs.readFile('data/kradfile3', 'utf-8', function (err, content) {
 			});
 		}
 	});
-	console.log(nodes);
-	var save = fs.writeFile('public/generated.json', JSON.stringify(nodes), () => {});
+	var save = fs.writeFile('functions/generated.json', JSON.stringify(nodes), () => {});
 });
 

@@ -22,13 +22,28 @@ So, to process the data, i had multiple options.
 
 So, I just made a simple script to transform the **RADKFILE** into a *simple* JSON.
 
+### Managing complexity.
+
+Well, as commit *9aca7d53* the project sort of works. I noticed that te generated json file is enormous. So I need a way to transform it into *chunks* and create dynamically the graphs per request.
+
+This can be acheived either spinning up any backend server, or managing it entirely on the frontend. But, since the file and the complexity is relatively high, I will move it to the backend.
+
+The backend will be on NodeJS, specifically on AWS functions written for netlify. Because it's free. And it solves the specific needs this project has.
+
+A way to generate a pseudo-static site, without having to maintain an entire server.
+
 ### Folder structure
 
 ```
 #data
 #public
-#get.sh
-#transform.js
+##index.html
+##script.js
+#functions
+##filter.js
+#scripts
+##get.sh
+##transform.js
 ```
 
 ## Contributing

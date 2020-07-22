@@ -4,6 +4,7 @@
 	"description": "A cool radical visualizer",
 	"main": "transform.js",
 	"scripts": {
+		"dev": "npm run build; netlify dev",
 		"build": "node transform.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},

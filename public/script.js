@@ -3,7 +3,8 @@ var chart = am4core.create("radikals", am4plugins_forceDirected.ForceDirectedTre
 
 // Create series
 var series = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries())
-series.dataSource.url = "generated.json";
+series.dataSource.incremental = false;
+series.dataSource.url = ".netlify/functions/filter?character=众";
 
 // Set up data fields
 series.dataFields.value = "value";

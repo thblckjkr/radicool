@@ -1,0 +1,9 @@
+[build]
+	# Default command to build the project
+	command = "npm run build"
+
+	# Route that will be published
+	publish = "public/"
+
+	# Route where serverless functions are stored
+	functions = "functions/"
