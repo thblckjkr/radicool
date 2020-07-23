@@ -1,3 +1,5 @@
 data/*
 !.gitkeep
+!data/kradfile3
+!data/radkfile3
 functions/generated.json
