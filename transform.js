@@ -33,6 +33,6 @@ fs.readFile('data/kradfile3', 'utf-8', function (err, content) {
 			});
 		}
 	});
-	var save = fs.writeFile('functions/generated.json', JSON.stringify(nodes), () => {});
+	var save = fs.writeFile('functions/filter/generated.json', JSON.stringify(nodes), () => {});
 });
 

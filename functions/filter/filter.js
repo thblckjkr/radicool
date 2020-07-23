@@ -12,7 +12,7 @@ const readFile = (path, opts = 'utf8') =>
 exports.handler = async (event, context, callback) => {
 	// Solution is to use absolute path using `__dirname`
 
-	let text = await readFile(__dirname +'/generated.json')
+	let text = await readFile( require.resolve('./generated.json') );
 	let data = JSON.parse(text);
 
 	let query = data.find( item => item.name = event.queryStringParameters['character'] );
